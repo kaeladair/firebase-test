@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 import FirebaseInit from './FirebaseInit.js';
 
 function App() {
