@@ -15,7 +15,7 @@ const firebaseConfig = {
 const FirebaseInit = () => {
   useEffect(() => {
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    getAnalytics(app);
   }, []);
 
   return null;
