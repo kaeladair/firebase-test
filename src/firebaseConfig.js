@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app"
+import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDRUW7WNENXmxGdhEofeGEx9AORUIAzDCA",
@@ -12,13 +12,6 @@ const firebaseConfig = {
   measurementId: "G-MECPTP4N93"
 };
 
-const FirebaseInit = () => {
-  useEffect(() => {
-    const app = initializeApp(firebaseConfig);
-    getAnalytics(app);
-  }, []);
-
-  return null;
-};
-
-export default FirebaseInit;
+export const app = initializeApp(firebaseConfig)
+export const auth = getAuth(app)
+export const db = getFirestore(app)
